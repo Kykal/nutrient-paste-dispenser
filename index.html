@@ -25,37 +25,143 @@
         <div class="container">
             <header>		
                 <div class="RIM">
-                    <span>RIMWORL'S NUTRIENT PASTE SIMULATOR</span>
+                    <span>RIMWORL'S NUTRIENT PASTE DISPENSER SIMULATOR</span>
+                </div>
+                <br>
+                <div style="text-align: center;">
+                    <button class="btn btn-dark" onclick="serve();">Pour yourself a delicious plate of nutrient paste</button>
                 </div>
             </header>
 
             <br><br>
-            <span>
-                Ammount of hoppers:
-                <select name="hopper" id="hopper" onclick="hopper();">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                </select>
-            </span>
-            
 
+            <div class="row">
+                <div class="col-sm">
+                    <span>
+                        Available hoppers:
+                        <select name="hopper" id="hopper">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                        </select>
+                    </span>
+                    <br><br>
+                    <span id="amounthoppers">
+                        <table>
+                            <tr>
+                                <th>
+                                    * Hopper 01:
+                                </th>
+                                <th></th>
+                                <th>
+                                    <input type="number" size="13" placeholder="amount of food" min="0" max="75" id="h01">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    * Hopper 02:
+                                </th>
+                                <th></th>
+                                <th>
+                                    <input type="number" size="13" placeholder="amount of food" min="0" max="75" id="h02">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    * Hopper 03:
+                                </th>
+                                <th></th>
+                                <th>
+                                    <input type="number" size="13" placeholder="amount of food" min="0" max="75" id="h03">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    * Hopper 04:
+                                </th>
+                                <th></th>
+                                <th>
+                                    <input type="number" size="13" placeholder="amount of food" min="0" max="75" id="h04">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    * Hopper 05:
+                                </th>
+                                <th></th>
+                                <th>
+                                    <input type="number" size="13" placeholder="amount of food" min="0" max="75" id="h05">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    * Hopper 06:
+                                </th>
+                                <th></th>
+                                <th>
+                                    <input type="number" size="13" placeholder="amount of food" min="0" max="75" id="h06">
+                                </th>
+                            <tr>
+                                <th>
+                                    * Hopper 07:
+                                </th>
+                                <th></th>
+                                <th>
+                                    <input type="number" size="13" placeholder="amount of food" min="0" max="75" id="h07">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    * Hopper 08:
+                                </th>
+                                <th></th>
+                                <th>
+                                    <input type="number" size="13" placeholder="amount of food" min="0" max="75" id="h08">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    * Hopper 09:
+                                </th>
+                                <th></th>
+                                <th>
+                                    <input type="number" size="13" placeholder="amount of food" min="0" max="75" id="h09">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    * Hopper 10:
+                                </th>
+                                <th></th>
+                                <th>
+                                    <input type="number" size="13" placeholder="amount of food" min="0" max="75" id="h10">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    * Hopper 11:
+                                </th>
+                                <th></th>
+                                <th>
+                                    <input type="number" size="13" placeholder="amount of food" min="0" max="75" id="h11">
+                                </th>
+                            </tr>
+                        </table>
+                    </span>
+                </div>
+                <div class="col-sm">
 
-
-
-
-
-
-
+                </div>
+            </div>
 
         </div>
     </body>

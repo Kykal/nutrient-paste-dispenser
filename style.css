@@ -16,7 +16,8 @@ body{
     color: aliceblue;
     font-family: 'Montserrat', Arial, Verdana;
     background-image: url('background.jpg');
-    background-size: cover;
+    background-position: top;
+    background-size: unset;
 }
 
 .container{
