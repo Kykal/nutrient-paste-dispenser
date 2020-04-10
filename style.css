@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'rimwordfontregular';
+    src: url('rimwordfont-webfont.woff2') format('woff2'),
+         url('rimwordfont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.RIM{
+    font-family: 'rimwordfontregular';
+    text-align: center;
+}
+
+body{
+    background-color: rgb(218,219, 211);
+    font-family: 'Montserrat', Arial, Verdana;
+}
