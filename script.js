@@ -10,6 +10,7 @@ function serve(){
     var x8 = parseInt(document.forms['frm']['h8'].value);
     var x9 = parseInt(document.forms['frm']['h9'].value);
     var hop = [x1, x2, x3, x4, x6, x6, x7, x8, x9];
+    var rest, i, j, food;
     
     console.log('Unordered array (as inputs register): ', hop);
 
@@ -24,9 +25,9 @@ function serve(){
         (x9==0 || x9==null || isNaN(x9)==true)){
         console.log('Can not serve nutrient paste; all hoppers are empty.');
     }else{
-        for(var j=0; j<9; j++){
-            for(var i=0; i<9; i++){
-                if(hop[i] > hop[i+1]){
+        for( j=0; j<9; j++ ){
+            for( i=0; i<9; i++){
+                if( hop[i] > hop[i+1] ){
                     var aux = hop[i];
                     hop[i] = hop[i+1];
                     hop[i+1] = aux;
@@ -35,8 +36,23 @@ function serve(){
         }
         console.log('Ordered array (from low to high): ', hop);
 
-        
-    }
+        for ( i=0; i<9; i++ ){
+            if( hop[i] == 0 ){
+                console.log('Hopper', i+1, 'is empty; jumping to next hopper.');
+            }else{
+                if( (6 - hop[i]) != 0 ){
+                    rest = 6-hop[i];
+                }
+                
+            }
 
+
+
+        }
+
+        if(rest!=0){
+            console.log('Nutrient paste dispenser needs', rest, ' food to serve a nutrient paste.');
+        }
+    }
     return true;
 }
