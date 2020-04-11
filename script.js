@@ -11,7 +11,7 @@ function serve(){
     var x9 = parseInt(document.forms['frm']['h9'].value);
     var hop = [x1, x2, x3, x4, x6, x6, x7, x8, x9];
     
-    console.log(hop);
+    console.log('Unordered array (as inputs register): ', hop);
 
     if( (x1==0 || x1==null || isNaN(x1)==true) &&
         (x2==0 || x2==null || isNaN(x2)==true) &&
@@ -24,6 +24,17 @@ function serve(){
         (x9==0 || x9==null || isNaN(x9)==true)){
         console.log('Can not serve nutrient paste; all hoppers are empty.');
     }else{
+        for(var j=0; j<9; j++){
+            for(var i=0; i<9; i++){
+                if(hop[i] > hop[i+1]){
+                    var aux = hop[i];
+                    hop[i] = hop[i+1];
+                    hop[i+1] = aux;
+                }
+            }
+        }
+        console.log('Ordered array (from low to high): ', hop);
+
         
     }
 
