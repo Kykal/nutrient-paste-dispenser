@@ -23,7 +23,7 @@ body{
 .container{
     margin-top: 20px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     border: solid rgb(51, 51, 51) 1px;
     background-color: rgb(20,23, 26);
 }
