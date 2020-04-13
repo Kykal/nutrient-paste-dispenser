@@ -9,10 +9,11 @@ function serve(){
     var x7 = parseInt(document.forms['frm']['h7'].value);
     var x8 = parseInt(document.forms['frm']['h8'].value);
     var x9 = parseInt(document.forms['frm']['h9'].value);
+    var counter = parseInt(document.getElementById('counter').value);
     var hop = [x1, x2, x3, x4, x6, x6, x7, x8, x9];
-    var rest, i, j, food;
+    var i, minvalue, minhop, food, foodbool, rest,j;
     
-    console.log('Unordered array (as inputs register): ', hop);
+    console.log(hop);
 
     if( (x1==0 || x1==null || isNaN(x1)==true) &&
         (x2==0 || x2==null || isNaN(x2)==true) &&
@@ -22,37 +23,86 @@ function serve(){
         (x6==0 || x6==null || isNaN(x6)==true) &&
         (x7==0 || x7==null || isNaN(x7)==true) &&
         (x8==0 || x8==null || isNaN(x8)==true) &&
-        (x9==0 || x9==null || isNaN(x9)==true)){
-        console.log('Can not serve nutrient paste; all hoppers are empty.');
+        (x9==0 || x9==null || isNaN(x9)==true) ){
+            console.log('Can not serve nutrient paste; all hoppers are empty.');
+    }else if(   (x1>75 || x1<0) ||
+                (x2>75 || x2<0) ||
+                (x3>75 || x3<0) ||
+                (x4>75 || x4<0) ||
+                (x5>75 || x5<0) ||
+                (x6>75 || x6<0) ||
+                (x7>75 || x7<0) ||
+                (x8>75 || x8<0) ||
+                (x9>75 || x9<0)     ){
+            console.log('There are more than 75 food or less than 0 food in some hopper.');
     }else{
-        for( j=0; j<9; j++ ){
-            for( i=0; i<9; i++){
-                if( hop[i] > hop[i+1] ){
-                    var aux = hop[i];
-                    hop[i] = hop[i+1];
-                    hop[i+1] = aux;
+        do{
+            minvalue = 76;
+            food=0;
+
+            for( i=0; i<9; i++ ){           //Check which hopper has the least amount of food units.
+                if( (hop[i] < minvalue) && (hop[i] != 0) ){ 
+                    minvalue = hop[i];  //Amount of food units that the hopper has.
+                    minhop = i;         //Hopper position (starting from 0) which has the least amount of food units.
                 }
             }
-        }
-        console.log('Ordered array (from low to high): ', hop);
 
-        for ( i=0; i<9; i++ ){
-            if( hop[i] == 0 ){
-                console.log('Hopper', i+1, 'is empty; jumping to next hopper.');
-            }else{
-                if( (6 - hop[i]) != 0 ){
-                    rest = 6-hop[i];
+            console.log('Hopper',minhop+1,'has', minvalue,'food');
+
+            rest = 6 - food;    //Compare how many food units needs to serve a plate of nutrient paste.
+
+            console.log('· Rest:',rest);
+
+            do{
+                if( minvalue > 0 ){
+                    minvalue--;
+                    console.log('· Now has:',minvalue, 'food');
+                    switch(minhop){
+                        case 0:
+                            document.getElementById('h1').value = minvalue;
+                        break;
+                        case 1:
+                            document.getElementById('h2').value = minvalue;
+                        break;
+                        case 2:
+                            document.getElementById('h3').value = minvalue;
+                        break;
+                        case 3:
+                            document.getElementById('h4').value = minvalue;
+                        break;
+                        case 4:
+                            document.getElementById('h5').value = minvalue;
+                        break;
+                        case 5:
+                            document.getElementById('h6').value = minvalue;
+                        break;
+                        case 6:
+                            document.getElementById('h7').value = minvalue;
+                        break;
+                        case 7:
+                            document.getElementById('h8').value = minvalue;
+                        break;
+                        case 8:
+                            document.getElementById('h9').value = minvalue;
+                        break;
+
+                        default:
+                            console.log('switch default');
+                        break;
+                    }
+                    food++;
+                    console.log('· Food:', food);
                 }
-                
+            }while(rest>0 && minvalue>0 && food <6);
+
+            if( food == 6 ){
+                rest = 0;
+                console.log('Nutrient paste served.');
+                document.getElementById('counter').value = counter+1;
             }
-
-
-
-        }
-
-        if(rest!=0){
-            console.log('Nutrient paste dispenser needs', rest, ' food to serve a nutrient paste.');
-        }
+            console.log('');
+        }while( food == 6 );
+        
     }
-    return true;
+    console.log(' ');
 }
