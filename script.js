@@ -1,21 +1,21 @@
 function serve(){
-
-    var x1 = parseInt(document.forms['frm']['h1'].value);
-    var x2 = parseInt(document.forms['frm']['h2'].value);
-    var x3 = parseInt(document.forms['frm']['h3'].value);
-    var x4 = parseInt(document.forms['frm']['h4'].value);
-    var x5 = parseInt(document.forms['frm']['h5'].value);
-    var x6 = parseInt(document.forms['frm']['h6'].value);
-    var x7 = parseInt(document.forms['frm']['h7'].value);
-    var x8 = parseInt(document.forms['frm']['h8'].value);
-    var x9 = parseInt(document.forms['frm']['h9'].value);
-    var counter = parseInt(document.getElementById('counter').value);
-    var hop = [x1, x2, x3, x4, x6, x6, x7, x8, x9];
+    var hop = [];
+    var nan;
+    for(var i=0; i<9;i++) {
+        let x = parseInt(document.forms['frm'][`h${i+1}`].value);
+        if(isNaN(x)){ 
+            nan = true;
+            break;
+        };
+        hop.push(x);
+    }
+    if(nan) return;
     sum = 0
     hop.forEach(element => {
         sum += element;
     });
     if(sum < 6) return;
+    if(sum > 75) return;
     console.log(`Initial array: [${hop}]`);
     let min = getMin(hop);
     let serve = 6;
@@ -37,7 +37,7 @@ function serve(){
 }
 
 function getMin(array) {
-    var comp_min = 75;
+    var comp_min = 76;
     var min = null;
     for(var i=0; i<array.length; i++) {
         if(array[i] < comp_min && array[i] != 0) {
