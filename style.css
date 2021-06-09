@@ -1,29 +1,149 @@
 @font-face {
-    font-family: 'rimwordfontregular';
-    src: url('rimwordfont-webfont.woff2') format('woff2'),
-         url('rimwordfont-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+    src: url('docs/rimwordfont-webfont.woff2') format('woff2'),
+         url('docs/rimwordfont-webfont.woff') format('woff');
+    font-family: rimworld;
 }
 
-.RIM{
-    font-family: 'rimwordfontregular';
+body {
+    background-image: url("docs/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 130vh;
+    font-family: Helvetica;
+    color: rgb(225, 224, 223);
+    cursor: url(./docs/cursor.png), auto;
+}
+
+@media screen and (max-width: 768px ) {
+    body {
+        background-size: 200% 100vh;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    body {
+        background-size: 290% 100vh;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        background-size: 300% 100vh;
+    }
+}
+
+.container {
+    cursor: url(./docs/cursor.png), auto;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.25fr;
+    grid-template-rows: 0.1fr 1fr;
+}
+
+.logo {
+    grid-column: 2/3;
     text-align: center;
 }
 
-body{
-    color: aliceblue;
-    font-family: 'Montserrat', Arial, Verdana;
-    background-image: url('background.jpg');
-    background-position: top;
-    background-size: unset;
+#logo {
+    width: 40vw;
 }
 
-.container{
-    margin-top: 20px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    border: solid rgb(51, 51, 51) 1px;
-    background-color: rgb(20,23, 26);
+.info{
+    border: solid rgb(97, 108, 123) 2px;
+    background-color: rgb(13, 18, 23);
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.2fr 1fr 0.2fr;
+    font-size: x-large;
+}
+
+h2 {
+    font-family: rimworld, Helvetica;
+    text-align: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.button {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+    margin: auto;
+}
+
+button{
+    font-size: medium;
+    color: rgb(225, 224, 223);
+    background-color: rgb(105, 81, 45);
+    border: solid black 2px;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow:
+                inset 4px -4px 0 0 rgb(79, 61, 34),
+                inset -5px 5px 0 0 rgb(125, 97, 51);
+}
+
+button:hover {
+    color: rgb(230, 230, 230);
+    cursor: url(./docs/cursor.png), auto;
+    background-color: rgb(136, 100, 50);
+    box-shadow: 
+                inset 4px -4px 0 0 rgb(102, 75, 37),
+                inset -5px 5px 0 0 rgb(150, 113, 54);
+}
+
+button:active{ 
+    color: rgb(230, 230, 230);
+    cursor: url(./docs/cursor.png), auto;
+    background-color: rgb(98, 73, 39);
+    box-shadow: 
+                inset 4px -4px 0 0 rgb(109, 86, 54),
+                inset -5px 5px 0 0 rgb(88, 66, 35);
+}
+
+.content {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    padding-top: 20px;
+}
+
+.hoppers {
+    grid-column: 1/2;
+    grid-row: 1;
+    padding-left: 20px;
+    font-size: x-large;
+}
+
+.animation {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+td {
+    padding-top: 7px;
+}
+
+#anim{
+    text-align: center;
+}
+
+input {
+    background-color: rgb(10, 12, 14);
+    color: white;
+    border: solid white 1px;
+    border-radius: 4px;
+    font-size: x-large;
+}
+
+.dev{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    text-align: center;
+    margin: auto;
 }
