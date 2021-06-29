@@ -6,7 +6,14 @@ In-game your Nutrient Paste Dispenser can have from 1 to 9 [hoppers](https://rim
 
 ### Pseudocode
 ```
-When 'Pur yourseld a delicious plate of nutrient paste' button is pressed
+WHILE ( 'Pour yourself a delicious plate of nutrient paste' button is pressed ) DO
+  
+
+
+
+END WHILE
+
+
 
 
 ```
