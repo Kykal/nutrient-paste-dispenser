@@ -5,3 +5,4 @@ This is a simulator of the [Nutrient Paste Dispenser](https://rimworldwiki.com/w
 In-game your Nutrient Paste Dispenser can have from 1 to 9 [hoppers](https://rimworldwiki.com/wiki/Hopper) next to it and you can fill them with a maxium amount of 75 units of raw food (meat, vegetals/fruit, etc.). When a pawn use the Nutrient Paste Dispenser, 6 units of raw food will be processed (from the hopper with the lowest amount of raw food) to deliver a Nutrient Paste.
 
 # How do I use the [simulator](https://kykal.github.io/RimWorldsNutrientPasteDispenserSimulator/)?
+The website will show you 9 inputs (hoppers), you can type between 0 and 75 in each one, those simulates the amount of raw food that are in each hoppers, when you are ready you can click the button to serve you a delicious plate of nutrient paste.
