@@ -1,6 +1,6 @@
+[<img align="right" alt="JavaScript" width="32px" src="https://raw.githubusercontent.com/github/explore/main/topics/javascript/javascript.png" />][JavaScript_Site]
 [<img align="right" alt="HTML" width="32px" src="https://raw.githubusercontent.com/github/explore/main/topics/html/html.png"  />][HTML_Site]
 [<img align="right" alt="CSS" width="32px" src="https://raw.githubusercontent.com/github/explore/main/topics/css/css.png" />][CSS_Site]
-[<img align="right" alt="JavaScript" width="32px" src="https://raw.githubusercontent.com/github/explore/main/topics/javascript/javascript.png" />][JavaScript_Site]
 
 [CSS_Site]: https://developer.mozilla.org/en-US/docs/Web/CSS
 [HTML_SITE]: https://developer.mozilla.org/en-US/docs/Web/HTML
