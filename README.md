@@ -5,9 +5,13 @@ The objective of this [web app](https://kykal.github.io/RimWorlds-Nutrient-Paste
 - - -
 ## Content
 1. [How to use](#how-to-use)
+2. [Nutrient paste dispenser behaviour](nutrient-paste-dispenser-behaviour)
 - - -
 
 ## How to use
 There are 9 possible inputs where you can assign the amount of food (0 min. - 75 max.). This machine needs a minimum total of 6 units of food to serve a dish.[^1] When you are ready to receive a dish just press the button and there you have. A delicious ~~horrible~~ nutrient paste. 
 
 [^1]: There is no need to have all 6 units of food in one hopper, you can ditribute them in all hoppers.
+
+## Nutrient paste dispenser behaviour
+When a dish is requested the machine will 
