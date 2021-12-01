@@ -9,9 +9,10 @@ The objective of this [web app](https://kykal.github.io/RimWorlds-Nutrient-Paste
 - - -
 
 ## How to use
-There are 9 possible inputs where you can assign the amount of food (0 min. - 75 max.). This machine needs a minimum total of 6 units of food to serve a dish.[^1] When you are ready to receive a dish just press the button and there you have. A delicious ~~horrible~~ nutrient paste. 
+There are nine possible inputs where you can assign the amount of food (0 min. - 75 max.). This machine needs a minimum total of 6 units of food to serve a dish.[^1] When you are ready to receive a dish just press the button and there you have. A delicious ~~horrible~~ nutrient paste. 
 
 [^1]: There is no need to have all 6 units of food in one hopper, you can ditribute them in all hoppers.
 
 ## Nutrient paste dispenser behaviour
-When a dish is requested the machine will check all the hoppers to verify if a dish can be served, if the amount of food between all hoppers is more or equal to 6, a meal will be server and 6 units of food will be *consumed*.
+When a dish is requested the machine will check all the hoppers to verify if a dish can be served, if the amount of food between all hoppers is more or equal to 6, a meal will be served and 6 units of food will be *consumed*.
+**Note:** when food is consumed from machine, it will start consuming from the hopper with least amount of food and so on.
