@@ -3,6 +3,6 @@
 # Nutrient paste dispenser simulator
 The objective of this web app is to simulare the Nutrient paste dispenser from the videogame RimWorld. It includes all 9 possible inputs (hoppers), so you cand assign the amount of food which one will have and when you are ready to receive your nutrient paste it will serve you one. ;)
 - - -
-Content
+## Content
 
 - - -
