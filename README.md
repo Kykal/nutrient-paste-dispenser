@@ -14,4 +14,4 @@ There are 9 possible inputs where you can assign the amount of food (0 min. - 75
 [^1]: There is no need to have all 6 units of food in one hopper, you can ditribute them in all hoppers.
 
 ## Nutrient paste dispenser behaviour
-When a dish is requested the machine will 
+When a dish is requested the machine will check all the hoppers to verify if a dish can be served, if the amount of food between all hoppers is more or equal to 6, a meal will be server and 6 units of food will be *consumed*.
